@@ -1,22 +1,39 @@
-.App {
-  text-align: center;
+:root{
+  --mainBlue: #5285e8;
+  --mainGray: #2A2A2A;
+  --LightBlue: #7a9fe8;
+  --mainWhite: #f3f3f3;
+  --mainYelowk: #ffcd35;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  background: var(--mainWhite);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1,h2,h3,h4,.text-title {
+  font-family: 'Open Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
-.App-link {
-  color: #09d3ac;
+.text-title {
+  color: var(--mainGray);
+  font-size: 28px;
+}
+
+.navbar-dark {
+  background: var(--mainGray);
+}
+
+.title-sufix {
+  text-shadow: 1px 1px 2px #2a2a2ade;
+  color: var(--mainYelowk);
+}
+
+/* Main componnents */
+.my-cart {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  letter-spacing: .5px;
+  color: var(--mainWhite);
 }
