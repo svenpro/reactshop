@@ -8,9 +8,9 @@ class ProductList extends Component {
         return (
             <React.Fragment>
                 <div className="py-5">
-                    <div className="pr-5 pl-5 container-fluid">
+                    <div className="container-fluid">
                         <Title name="Our" title="Products"/>
-                        <div className="row">
+                        <div className="product-grid row mr-1 ml-1">
                             <ProductConsumer>
                                 {value => {
                                     return value.products.map( product => {

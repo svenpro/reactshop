@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../logo.svg';
+import logo from '../logo.png';
 
 class Navbar extends Component {
     render() {
@@ -11,7 +11,7 @@ class Navbar extends Component {
                </Link>
                <ul className="navbar-nav align-items-center">
                    <li className="nav-item ml-5">
-                       <Link to="/products" className="nav-link">
+                       <Link to="/" className="nav-link">
                            Products
                        </Link>
                    </li>

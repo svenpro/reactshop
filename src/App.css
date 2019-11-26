@@ -12,6 +12,7 @@ body {
 
 h1,h2,h3,h4,.text-title {
   font-family: 'Open Sans', sans-serif;
+  margin-bottom: 30px;
   text-transform: uppercase;
   font-weight: 800;
 }
@@ -36,4 +37,79 @@ h1,h2,h3,h4,.text-title {
   font-weight: 800;
   letter-spacing: .5px;
   color: var(--mainWhite);
+}
+
+/* Product greed */
+.product-detail .info {
+  min-height: 75px;
+  max-height: 75px;
+  overflow: hidden;
+}
+
+.product-title {
+  color: var(--mainGray);
+  font-size: 20px;
+  min-height: 48px;
+  max-height: 48px;
+}
+
+.image-container a:hover {
+  text-decoration: none;
+}
+
+.product-grid .item {
+  padding-bottom: 15px;
+  padding-top: 5px;
+  margin-bottom: 10px;
+}
+
+.product-grid .item .inner-product-wp {
+  transition: box-shadow, .3s;
+  padding: 12px;
+  background: #fafafa;
+}
+
+.product-grid .item:hover .inner-product-wp {
+  box-shadow: 3px 2px 10px rgb(163, 163, 163);
+}
+
+.product-grid .item:hover .to-cart-btn i {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  position: relative;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+
+.container-fluid {
+ max-width: 1440px; 
+}
+
+.navbar-brand {
+  max-width: 150px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255, .8);  
+}
+
+
+/* Animation */
+@-webkit-keyframes bounce {
+  0%, 50%, 100% {
+    -webkit-transform: translateY(0);
+  }
+  25%, 75% {
+    -webkit-transform: translateY(-5px);
+  }
+}
+@keyframes bounce {
+  0%, 50%, 100% {
+    transform: translateY(0);
+  }
+  25%, 75% {
+    transform: translateY(-5px);
+  }
 }

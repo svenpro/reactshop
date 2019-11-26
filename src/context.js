@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {storeProducts, detailProducts} from './data'
+import {storeProducts, detailProduct} from './data'
 
 const ProductContext = React.createContext();
 // Provider
@@ -7,15 +7,52 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
     state = {
-        products: storeProducts 
-    }
-    hendleDetail = () => {
-        console.log('Hello from detail');
+        products: [],
+        detailProduct: detailProduct,
+        cart: []
+    };
+
+    componentDidMount() {
+        this.setProducts();
+    };
+    
+    setProducts = () => {
+        let tempProducts = [];
+        storeProducts.forEach(item => {
+            const singleitem = {...item};   
+            tempProducts = [...tempProducts, singleitem];
+        }) 
+        this.setState(() => {
+            return {products: tempProducts}
+        })
+    };
+
+    getItem = (id) => {
+        const product = this.state.products.find(item => item.id === id);
+        return product
     }
 
-    addToCart = () => {
-        console.log('Product ad to cart');
-    }
+    hendleDetail = (id) => {
+        const product = this.getItem(id);
+        this.setState(() => {
+            return {detailProduct:product}
+        });
+    };
+
+    addToCart = (id) => {
+        let tempProducts = [...this.state.products];
+        const index = tempProducts.indexOf(this.getItem(id));
+        const product = tempProducts[index];
+        product.inCart = true;
+        product.count = 1;
+        const price = product.price;
+        product.total = product.total + price;
+        this.setState(() => { 
+            return {products:tempProducts, cart: [...this.state.cart, product]};
+        }, () => console.log(this.state))
+
+        console.log(`Product with id: ${id} ad to cart`);
+    };
 
     render() {
         return (
@@ -27,7 +64,7 @@ class ProductProvider extends Component {
                 {this.props.children}
             </ProductContext.Provider>
         );
-    }
+    };
 }
 
 const ProductConsumer = ProductContext.Consumer;
