@@ -13,6 +13,7 @@ class Product extends Component {
                         {value => (
                             <div className="inner-product-wp">
                                 <div className="image-container p5" onClick={() => {value.handleDetail(id)}}>
+                                    <h3>You just added to cart a pro</h3>
                                     <Link to="/details">       
                                         <img src={img} alt="product img" className="card-img-top"/>
                                         <h3 className="product-title">{title}</h3>
@@ -25,7 +26,10 @@ class Product extends Component {
                                     </p>
                                     <div className="actio-wrapper text-right">
                                         <button className={`${inCart ? 'btn-info' : 'btn-primary'} btn  btn-success to-cart-btn`} 
-                                            onClick={() => {value.addToCart(id)}}>  
+                                            onClick={() => {
+                                                value.addToCart(id);
+                                                value.openModal(id);
+                                            }}>  
                                             <i className="mr-3 fas fa-cart-plus"></i> {inCart ? 'Product in cart' : 'Add to Cart'}
                                         </button>
                                     </div>

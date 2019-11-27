@@ -95,6 +95,35 @@ h1,h2,h3,h4,.text-title {
   color: rgba(255,255,255, .8);  
 }
 
+.product-modal {
+  display: block;
+}
+
+.modal-dialog {
+  max-width: 500px;
+}
+.close-modal {
+  width: 20px;
+  height: 20px;
+  font-size: 45px;
+  font-weight: 100;
+  display: block;
+  color: var(--mainGray);
+  position: absolute;
+  top: 0;
+  right: 5px;
+  transform: rotate(45deg);
+}
+
+.modal-dialog .action-section {
+  display: flex;
+}
+
+.img-fluid {
+  width: 100%;  
+}
+
+
 
 /* Animation */
 @-webkit-keyframes bounce {

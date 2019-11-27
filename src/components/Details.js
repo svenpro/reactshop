@@ -9,7 +9,7 @@ class Details extends Component {
                 {(value)=>{
                     const {id, company, img, info, title, price,  inCart} = value.detailProduct;
                     return (
-                        <div className="container py-5">
+                        <div className="container-fluid py-5">
                             <div className="row">
                                 <div className="col-md-5">
                                     <img src={img} alt="detail product img" /> 
@@ -23,7 +23,10 @@ class Details extends Component {
                                     <p className="product-price">Price: {price} $</p>
                                     <div className="action-sectio">
                                     <button className={`${inCart ? 'btn-info' : 'btn-primary'} btn  btn-success to-cart-btn`} 
-                                        onClick={() => {value.addToCart(id)}}>
+                                        onClick={() => {
+                                            value.addToCart(id);
+                                            value.openModal(id);
+                                        }}>
                                             <i className="mr-3 fas fa-cart-plus"></i> {inCart ? 'Product in cart' : 'Add to Cart'}
                                         </button>
                                         <Link to="/">      
