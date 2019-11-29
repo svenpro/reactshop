@@ -8,7 +8,7 @@ class Modal extends Component {
             <ProductConsumer>
                 {(value) => {
                     const {modalOpen, closeModal} = value;
-                    const {id, img, title, price, shortInfo, inCart} = value.modalProduct;
+                    const {id, img, title, price, shortInfo} = value.modalProduct;
 
                     if (modalOpen) {
                         return (                
