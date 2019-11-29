@@ -89,6 +89,8 @@ h1,h2,h3,h4,.text-title {
 
 .navbar-brand {
   max-width: 150px;
+  position: relative;
+  top: -3px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -140,5 +142,15 @@ h1,h2,h3,h4,.text-title {
   }
   25%, 75% {
     transform: translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-nav .nav-item {
+    margin-left: 0 !important;
+  }
+
+  .navbar-brand {
+    max-width: 110px;
   }
 }

@@ -18,7 +18,7 @@ class Navbar extends Component {
                </ul>
                <Link to="/cart" className="ml-auto">
                    <button className="my-cart btn btn-primary">
-                        <i className="fas fa-shopping-basket"></i> My cart
+                        <i className="fas fa-shopping-basket"></i> <span className="d-none d-md-inline">My cart</span>
                         <span className="ml-2 badge badge-light">2</span>    
                    </button>
                 </Link>
