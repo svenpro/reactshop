@@ -54,7 +54,7 @@ class ProductProvider extends Component {
         product.total = product.total + price;
         this.setState(() => { 
             return {products:tempProducts, cart: [...this.state.cart, product]};
-        });
+        }, () => this.addTotals());
     };
 
     openModal = id => {
@@ -83,7 +83,29 @@ class ProductProvider extends Component {
     }
 
     clearCart = () => {
-        console.log('cart was clear');
+        this.setState(() => {
+            return {cart : []}
+        }, () => {
+            this.setProducts();
+            this.addTotals();
+        });
+    }
+
+    addTotals = () => {
+        let subTotal = 0;
+        this.state.cart.map(item => (subTotal += item.total));
+
+        const tempTaxt = subTotal * 0.1;
+        const tax = parseFloat(tempTaxt.toFixed(2));
+
+        const total = subTotal + tax;
+        this.setState(()=>{
+            return {
+                cartSubTotal: subTotal,
+                cartTax: tax,
+                cartTotal: total
+            }
+        })
     }
 
     render() {

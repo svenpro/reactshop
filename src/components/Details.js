@@ -23,6 +23,7 @@ class Details extends Component {
                                     <p className="product-price">Price: {price} $</p>
                                     <div className="action-sectio">
                                     <button className={`${inCart ? 'btn-info' : 'btn-primary'} btn  btn-success to-cart-btn`} 
+                                        // disabled={`${inCart ? 'disabled' : true}`}
                                         onClick={() => {
                                             value.addToCart(id);
                                             value.openModal(id);

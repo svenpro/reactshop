@@ -26,7 +26,8 @@ class Product extends Component {
                                     </p>
                                     <div className="actio-wrapper text-right">
                                         <button className={`${inCart ? 'btn-info' : 'btn-primary'} btn  btn-success to-cart-btn`} 
-                                            onClick={() => {
+                                        //    disabled={`${inCart ? 'disabled' : false }`}
+                                           onClick={() => {
                                                 value.addToCart(id);
                                                 value.openModal(id);
                                             }}>  
