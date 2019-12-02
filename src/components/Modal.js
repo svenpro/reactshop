@@ -43,7 +43,6 @@ class Modal extends Component {
                     }                  
                 }}
             </ProductConsumer>
-            
         );
     }
 }
