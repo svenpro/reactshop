@@ -5,7 +5,7 @@ function CartList({value}) {
     const {cart} = value;
     
     return (
-        <div className="container-fluid text-center pr-4 pl-4">
+        <div className="container-fluid text-center my-4 pr-4 pl-4">
                 {cart.map(item=>{
                     return <CartItem key={item.id} item={item} value={value}/>
                 })}

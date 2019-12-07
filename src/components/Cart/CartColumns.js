@@ -7,22 +7,22 @@ class CartColumns extends Component {
             <div className="container-fluid text-center pr-4 pl-4">
                 <div className="row justify-content-between">
                     <div className="cart-title col-md-2">
-                        <p className="text-uppercase">Products</p>
+                        <strong className="text-uppercase">Products</strong>
                     </div>
                     <div className="cart-title col-md-3">
-                        <p className="text-uppercase">Name</p>
+                        <strong className="text-uppercase">Name</strong>
                     </div>
                     <div className="cart-title col-md-2">
-                        <p className="text-uppercase">Price</p>
+                        <strong className="text-uppercase">Price</strong>
                     </div>
                     <div className="cart-title col-md-2">
-                        <p className="text-uppercase">Qty</p>
+                        <strong className="text-uppercase">Qty</strong>
                     </div>
                     <div className="cart-title col-md-1">
-                        <p className="text-uppercase">Remove</p>
+                        <strong className="text-uppercase">Remove</strong>
                     </div>
                     <div className="cart-title col-md-2">
-                        <p className="text-uppercase">Total</p>
+                        <strong className="text-uppercase">Total</strong>
                     </div>
                 </div>       
             </div>
